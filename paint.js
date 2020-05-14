@@ -39,7 +39,7 @@ canvas.addEventListener('mouseup', function (e) {
 });
     
 canvas.addEventListener('touchstart', function (e) {
-    e.preventDefault()
+//     e.preventDefault()
     setMouseCoordinates(e)
     mouseflag = true;
 
@@ -48,7 +48,7 @@ canvas.addEventListener('touchstart', function (e) {
 });
     
 canvas.addEventListener('touchmove', function (e) {
-    e.preventDefault()
+//     e.preventDefault()
     setMouseCoordinates(e)
 
     if (mouseflag === true) {
@@ -58,7 +58,7 @@ canvas.addEventListener('touchmove', function (e) {
 });
     
 canvas.addEventListener('touchend', function (e) {
-    e.preventDefault()
+//     e.preventDefault()
     setMouseCoordinates(e)
 
     mouseflag = false;
