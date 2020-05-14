@@ -16,6 +16,7 @@ canvasContext.strokeStyle = 'red';
 canvasContext.width = 1;
     
 canvas.addEventListener('touchstart', function (e) {
+    fixTouchMove(e)
     e.preventDefault()
     setMouseCoordinates(e)
     mouseflag = true;
@@ -102,5 +103,10 @@ finalImage.href=imageFile;
 finalImage.download=imageName;
 finalImage.click();
 });
+    
+ function fixTouchMove( event )
+{
+    return;
+}
 
 };
