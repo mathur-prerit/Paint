@@ -15,8 +15,10 @@ let mouseY = 0;
 canvasContext.strokeStyle = 'red';
 canvasContext.width = 1;
     
-canvas.addEventListener('touchstart', function (e) {
+document.body.addEventListener('touchstart', function (e) {
+    if(e.target===canvas){
     e.preventDefault()
+    }
     setMouseCoordinates(e)
     mouseflag = true;
 
@@ -24,8 +26,10 @@ canvas.addEventListener('touchstart', function (e) {
     canvasContext.moveTo(mouseX, mouseY);
 },false);
     
-canvas.addEventListener('touchmove', function (e) {
+document.body.addEventListener('touchmove', function (e) {
+    if(e.target===canvas){
     e.preventDefault()
+    }
     setMouseCoordinates(e)
 
     if (mouseflag === true) {
@@ -34,8 +38,10 @@ canvas.addEventListener('touchmove', function (e) {
     }
 },false);
     
-canvas.addEventListener('touchend', function (e) {
+document.body.addEventListener('touchend', function (e) {
+    if(e.target===canvas){
     e.preventDefault()
+    }
     setMouseCoordinates(e)
 
     mouseflag = false;
