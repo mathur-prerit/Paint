@@ -16,14 +16,13 @@ canvasContext.strokeStyle = 'red';
 canvasContext.width = 1;
     
 canvas.addEventListener('touchstart', function (e) {
-    fixTouchMove(e)
     e.preventDefault()
     setMouseCoordinates(e)
     mouseflag = true;
 
     canvasContext.beginPath();
     canvasContext.moveTo(mouseX, mouseY);
-});
+},false);
     
 canvas.addEventListener('touchmove', function (e) {
     e.preventDefault()
@@ -33,14 +32,14 @@ canvas.addEventListener('touchmove', function (e) {
         canvasContext.lineTo(mouseX, mouseY);
         canvasContext.stroke();
     }
-});
+},false);
     
 canvas.addEventListener('touchend', function (e) {
     e.preventDefault()
     setMouseCoordinates(e)
 
     mouseflag = false;
-});
+},false);
     
 canvas.addEventListener('mousedown', function (e) {
     setMouseCoordinates(e)
@@ -103,10 +102,5 @@ finalImage.href=imageFile;
 finalImage.download=imageName;
 finalImage.click();
 });
-    
- function fixTouchMove( event )
-{
-    return;
-}
 
 };
