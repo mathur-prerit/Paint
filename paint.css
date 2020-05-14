@@ -1,0 +1,16 @@
+#myPaintCanvas{
+    cursor: crosshair;
+    border:1px solid black;
+}
+
+.flex-class{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+
+.marg-pad{
+    padding: 0.5%;
+    margin: 1%;
+}
