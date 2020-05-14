@@ -1,6 +1,7 @@
 window.onload=function(){
 
 let canvas = document.getElementById("myPaintCanvas");
+    console.log(canvas)
 
 // let heightRatio = 1.5;
 // canvas.height=canvas.ratio*heightRatio;
