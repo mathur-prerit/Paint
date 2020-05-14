@@ -15,10 +15,11 @@ let mouseY = 0;
 canvasContext.strokeStyle = 'red';
 canvasContext.width = 1;
     
-document.body.addEventListener('touchstart', function (e) {
-    if(e.target===canvas){
-    e.preventDefault()
-    }
+
+canvas.addEventListener('touchstart', function (e) {
+//     if(e.target===canvas){
+//     e.preventDefault()
+//     }
     setMouseCoordinates(e)
     mouseflag = true;
 
@@ -26,22 +27,26 @@ document.body.addEventListener('touchstart', function (e) {
     canvasContext.moveTo(mouseX, mouseY);
 },false);
     
-document.body.addEventListener('touchmove', function (e) {
-    if(e.target===canvas){
-    e.preventDefault()
-    }
+
+canvas.addEventListener('touchmove', function (e) {
+//     if(e.target===canvas){
+//     e.preventDefault()
+//     }
     setMouseCoordinates(e)
 
     if (mouseflag === true) {
         canvasContext.lineTo(mouseX, mouseY);
         canvasContext.stroke();
     }
+    
+    e.preventDefault()
 },false);
     
-document.body.addEventListener('touchend', function (e) {
-    if(e.target===canvas){
-    e.preventDefault()
-    }
+
+canvas.addEventListener('touchend', function (e) {
+//     if(e.target===canvas){
+//     e.preventDefault()
+//     }
     setMouseCoordinates(e)
 
     mouseflag = false;
