@@ -48,6 +48,7 @@ document.body.addEventListener('touchend', function (e) {
 },false);
     
 canvas.addEventListener('mousedown', function (e) {
+    console.log(e.target)
     setMouseCoordinates(e)
     mouseflag = true;
 
