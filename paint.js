@@ -1,7 +1,6 @@
 window.onload=function(){
 
 let canvas = document.getElementById("myPaintCanvas");
-console.dir(canvas)
 
 // let heightRatio = 1.5;
 // canvas.height=canvas.ratio*heightRatio;
@@ -48,7 +47,6 @@ document.body.addEventListener('touchend', function (e) {
 },false);
     
 canvas.addEventListener('mousedown', function (e) {
-    console.log(e.target)
     setMouseCoordinates(e)
     mouseflag = true;
 
