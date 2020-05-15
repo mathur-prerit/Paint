@@ -20,13 +20,14 @@ canvas.addEventListener('touchstart', function (e) {
 //     if(e.target===canvas){
 //     e.preventDefault()
 //     }
+    e.preventDefault()
     setMouseCoordinates(e)
     mouseflag = true;
 
     canvasContext.beginPath();
     canvasContext.moveTo(mouseX, mouseY);
-    e.preventDefault()
-},false);
+    
+},{passive:false});
     
 
 canvas.addEventListener('touchmove', function (e) {
@@ -42,19 +43,19 @@ canvas.addEventListener('touchmove', function (e) {
     }
     
     
-},false);
+},{passive:false});
     
 
 canvas.addEventListener('touchend', function (e) {
 //     if(e.target===canvas){
 //     e.preventDefault()
 //     }
+    e.preventDefault()
     setMouseCoordinates(e)
 
     mouseflag = false;
     
-    e.preventDefault()
-},false);
+},{passive:false});
     
 canvas.addEventListener('mousedown', function (e) {
     console.log(e.target)
