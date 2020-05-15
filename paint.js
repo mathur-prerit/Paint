@@ -20,7 +20,7 @@ canvas.addEventListener('touchstart', function (e) {
 //     if(e.target===canvas){
 //     e.preventDefault()
 //     }
-    e.preventDefault()
+//     e.preventDefault()
     setMouseCoordinates(e)
     mouseflag = true;
 
@@ -50,7 +50,7 @@ canvas.addEventListener('touchend', function (e) {
 //     if(e.target===canvas){
 //     e.preventDefault()
 //     }
-    e.preventDefault()
+//     e.preventDefault()
     setMouseCoordinates(e)
 
     mouseflag = false;
